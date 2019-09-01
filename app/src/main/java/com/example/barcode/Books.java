@@ -1,13 +1,20 @@
 package com.example.barcode;
 
-public class Books {
+
+import java.io.Serializable;
+
+public class Books implements Serializable {
     private  String  BookName;
     private  String Authors;
-    private  String Isbn;
+    private  String Bsbn;
 
     public Books() {
     }
-
+    public Books(String BookName,String Authors, String Isbn){
+        this.BookName=BookName;
+        this.Authors= Authors;
+        this.Bsbn=Isbn;
+    }
     public String getBookName() {
         return BookName;
     }
@@ -24,11 +31,11 @@ public class Books {
         Authors = authors;
     }
 
-    public String getIsbn() {
-        return Isbn;
+    public String getBsbn() {
+        return Bsbn;
     }
 
-    public void setIsbn(String isbn) {
-        Isbn = isbn;
+    public void setBsbn(String bsbn) {
+        Bsbn = bsbn;
     }
 }
